@@ -16,11 +16,20 @@ Function Write-VerboseEx
 .Parameter Caller
     Shows the function name that called Write-VerboseEx. If this was called from outside a function then the string "<ScriptBlock>" will be used instead. The default is $false.
 
+.NOTES
+    Written by Stephen L. De Rudder
+
 .EXAMPLE
     PS > Write-VerboseEx -Timestamp -Caller "Hello World!"
     VERBOSE: 2022-04-22T02:44:22.6195663-05:00:<ScriptBlock>: Hello World!
 
     This produced a verbose message with a timestamp and caller.
+
+.EXAMPLE
+    PS > Write-VerboseEx "Hello PowerShell!"
+    VERBOSE: 2022-04-22T02:44:22.6195663-05:00: Hello PowerShell!
+
+    This produced a verbose message with a timestamp.
 #>
 
     param(
